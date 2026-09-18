@@ -1,32 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>My Todo App</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <div class="app">
+    <main class="app">
 
-        <h1>My Todo App</h1>
+        <header>
+            <h1>My Todo List</h1>
 
-        <input
-            id="taskInput"
-            type="text"
-            placeholder="Enter a task"
-        >
+            <button id="themeButton">
+                🌙
+            </button>
+        </header>
 
-        <button onclick="addTask()">Add</button>
+        <section class="input-area">
+
+            <input
+                id="taskInput"
+                type="text"
+                placeholder="What needs to be done?"
+                maxlength="100"
+            >
+
+            <button id="addButton">
+                Add
+            </button>
+
+        </section>
+
+        <section class="toolbar">
+
+            <button class="filter active"
+                    data-filter="all">
+                All
+            </button>
+
+            <button class="filter"
+                    data-filter="active">
+                Active
+            </button>
+
+            <button class="filter"
+                    data-filter="completed">
+                Completed
+            </button>
+
+        </section>
 
         <ul id="taskList"></ul>
 
-    </div>
+        <footer>
+
+            <span id="taskCount">
+                0 tasks
+            </span>
+
+            <button id="clearCompleted">
+                Clear completed
+            </button>
+
+        </footer>
+
+    </main>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
